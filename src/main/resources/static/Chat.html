@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:,">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Between</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <p class="wordmark">Between</p>
+            <div class="session-row">
+                <span class="me">Signed in as <strong id="meLabel"></strong></span>
+                <button class="btn btn-quiet" id="logoutBtn">Log out</button>
+            </div>
+        </div>
+        <ul class="user-list" id="userList" aria-label="People you can message"></ul>
+    </aside>
+
+    <main class="thread-pane" id="threadPane">
+        <div class="thread-empty" id="threadEmpty">
+            Choose someone on the left to start — or continue — a conversation.
+        </div>
+
+        <div id="threadActive" style="display:none; flex-direction:column; flex:1; min-height:0;">
+            <div class="thread-header">
+                <button class="back-btn" id="backBtn" aria-label="Back to people">←</button>
+                <h2 id="threadTitle"></h2>
+            </div>
+
+            <div class="message-list" id="messageList"></div>
+
+            <p class="connection-note" id="connectionNote"></p>
+
+            <form class="composer" id="composerForm">
+                <textarea id="composerInput" rows="1" placeholder="Write a message…" required></textarea>
+                <button type="submit" class="btn send-btn">Send</button>
+            </form>
+        </div>
+    </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/chat.js"></script>
+</body>
+</html>

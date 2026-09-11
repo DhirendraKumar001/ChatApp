@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:,">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in — Between</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="auth-shell">
+    <div class="brand-pane">
+        <p class="wordmark">Between</p>
+        <p class="tagline">A quiet line between two people. No groups, no noise — just the conversation you came for.</p>
+    </div>
+    <div class="form-pane">
+        <div class="form-inner">
+            <h1>Sign in</h1>
+            <p class="form-error" id="formError"></p>
+            <form id="loginForm" novalidate>
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" autocomplete="username" required>
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" required>
+                </div>
+                <button type="submit" class="btn" id="submitBtn">Sign in</button>
+            </form>
+            <p class="form-note">New here? <a href="register.html">Create an account</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
